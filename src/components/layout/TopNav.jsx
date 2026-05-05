@@ -31,7 +31,7 @@ export default function TopNav() {
         <a href="#contact" className="nav-pill">
           <span className="pill-text">Contact Me</span>
         </a>
-        <a href="/cv" className="nav-pill">
+        <a href="https://drive.google.com/file/d/1sJgNmW9Qdw5arC4MJpou9HucMVMGWTxk/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="nav-pill">
           <span className="pill-text">My CV</span>
         </a>
       </div>

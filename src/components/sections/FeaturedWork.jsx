@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight } from 'lucide-react';
 import { projectsData } from '../../data/projects';
+import { Link } from 'react-router-dom';
 import SplitText from '../ui/SplitText';
 import MagneticButton from '../ui/MagneticButton';
 import './FeaturedWork.css';
@@ -85,9 +86,9 @@ export default function FeaturedWork() {
       
       <div className="view-all-container">
         <MagneticButton strength={0.2}>
-          <a href="/projects" className="view-all-btn">
+          <Link to="/projects" className="view-all-btn">
             View All Projects
-          </a>
+          </Link>
         </MagneticButton>
       </div>
     </section>
