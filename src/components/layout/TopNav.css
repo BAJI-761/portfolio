@@ -1,0 +1,63 @@
+.top-nav {
+  position: relative; /* Not fixed, so it scrolls with the page and pushes content down */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
+  z-index: 100;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 0.5rem; /* Tighter gap between pills */
+}
+
+.nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem; /* px-3 py-2 approximately */
+  border-radius: 12px; /* rounded-xl */
+  background-color: #161616; /* bg-secondary */
+  border: 1px solid transparent;
+  color: #a1a1a1; /* text-dimmed */
+  font-size: 0.95rem; /* text-baseish */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-pill:hover, .nav-pill.active {
+  color: #ffffff; /* text-primary */
+  background-color: #1a1a1a; /* slightly lighter on hover if desired, or stay same */
+}
+
+.nav-pill.icon-only {
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+/* Adjust layout on small screens */
+@media (max-width: 640px) {
+  .top-nav {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  
+  .nav-pill {
+    padding: 0.5rem;
+  }
+
+  .nav-pill .pill-text {
+    display: none;
+  }
+  
+  .nav-right .nav-pill .pill-text {
+    display: inline; /* Keep text for contact/CV on mobile */
+    padding: 0 0.5rem;
+  }
+}

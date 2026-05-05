@@ -1,0 +1,184 @@
+/* =============================================================
+   MILESTONES PAGE — Certifications & Memories
+   ============================================================= */
+
+.milestones-page {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-24);
+  min-height: 100vh;
+}
+
+/* ---- Hero Header ---- */
+.milestones-hero {
+  margin-bottom: 80px;
+  max-width: 700px;
+}
+
+.milestones-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.milestones-subtitle {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ---- Section Headings ---- */
+.milestones-section-heading {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+}
+
+/* ---- Certifications Section ---- */
+.milestones-certs-section {
+  margin-bottom: 120px;
+}
+
+/* Reuse the cert card styles from About.css */
+.milestones-page .certs-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.milestones-page .cert-modern-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .milestones-page .cert-modern-card {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.milestones-page .cert-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-dimmed);
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .milestones-page .cert-icon-wrapper {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.milestones-page .cert-content {
+  flex-grow: 1;
+}
+
+.milestones-page .cert-content h4 {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.milestones-page .cert-content p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.milestones-page .cert-arrow {
+  color: var(--text-dimmed);
+  opacity: 0;
+  transform: translateX(-10px) translateY(10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover Effects */
+.milestones-page .cert-modern-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .milestones-page .cert-modern-card:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.milestones-page .cert-modern-card:hover .cert-icon-wrapper {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  transform: scale(1.05);
+}
+
+.milestones-page .cert-modern-card:hover .cert-arrow {
+  opacity: 1;
+  color: var(--text-primary);
+  transform: translateX(0) translateY(0);
+}
+
+/* ---- Memories Section ---- */
+.milestones-memories-section {
+  margin-bottom: 80px;
+}
+
+.milestones-page .masonry-awards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.milestones-page .masonry-awards > div {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+}
+
+.milestones-page .masonry-card {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.milestones-page .masonry-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.milestones-page .masonry-card:hover .masonry-img {
+  transform: scale(1.02);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .milestones-page .certs-modern-grid {
+    grid-template-columns: 1fr;
+  }
+}

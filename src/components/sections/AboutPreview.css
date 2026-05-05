@@ -1,0 +1,79 @@
+/* =============================================================
+   ABOUT PREVIEW — Home page "About me" teaser
+   ============================================================= */
+
+.about-preview-section {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding-x) 120px;
+}
+
+.about-preview-heading {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.about-preview-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+.about-preview-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-left: 0;
+}
+
+.about-preview-points li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-preview-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-dimmed);
+}
+
+.about-preview-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .about-preview-link {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.about-preview-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.25);
+  opacity: 1;
+}
+
+[data-theme="light"] .about-preview-link:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.2);
+}

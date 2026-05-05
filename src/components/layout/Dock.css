@@ -1,0 +1,163 @@
+/* =============================================================
+   DOCK — macOS-style floating bottom navigation
+   ============================================================= */
+
+.dock-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-dock);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---- Dock Bar ---- */
+.dock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px;
+  background: var(--bg-dock);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .dock {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Dock Item Wrapper ---- */
+.dock-item-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Dock Item Button ---- */
+.dock-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: color var(--duration-fast) ease,
+              background-color var(--duration-fast) ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dock-item:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+.dock-item--active {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ---- Dock Item Label (Active) ---- */
+.dock-item-label {
+  font-size: var(--text-sm);
+  line-height: 1;
+  font-weight: var(--font-weight-medium);
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* ---- Tooltip ---- */
+.dock-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: var(--bg-tooltip);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .dock-tooltip {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Settings Popup ---- */
+.dock-settings-popup {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: -20px;
+  width: 260px;
+  padding: 16px;
+  background: var(--bg-dock);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-base);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .dock-settings-popup {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Toast ---- */
+.dock-toast {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .dock-wrapper {
+    bottom: 12px;
+  }
+
+  .dock {
+    padding: 6px 8px;
+    gap: 2px;
+  }
+
+  .dock-item {
+    height: 36px;
+    min-width: 36px;
+    padding: 0 8px;
+  }
+
+  .dock-item-label {
+    font-size: var(--text-xs);
+  }
+
+  .dock-settings-popup {
+    right: -60px;
+    width: 240px;
+  }
+}

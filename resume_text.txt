@@ -1,0 +1,45 @@
+SHAIK BAJI
+Tamil Nadu, India♂phone+91-8179472676/envel⌢pebaji32456@gmail.com/linkedin /github
+Software Engineer with strong problem-solving and collaboration skills, experienced in developing scalable applications, REST APIs, and
+machine learning systems. Passionate about building secure, efficient software using modern development practices and SDLC
+methodologies.
+Education
+Degree:B.Tech in Computer Science (AI & ML).
+University:Kalasalingam Academy of Research and Education.
+Duration:Aug 2023 – May 2027.
+CGPA:9.23/10.
+Technical Skills
+•Programming:Python, Java, C.
+•Core Concepts:Data Structures, OOP, DBMS, Problem Solving.
+•Software Engineering:SDLC, Debugging, Automation, API Development.
+•Technologies:Machine Learning, Big Data basics, FinTech concepts.
+•Tools:Git, VS Code.Cloud:Firebase, Supabase.
+Experience
+Machine Learning Intern, Prodigy InfoTechJul 2025 – Aug 2025
+•Improved prediction accuracy by15%by optimizing ML models using structured datasets.
+•Processed and analyzed3000+ data records, improving model reliability.
+•Applied debugging, validation, and SDLC practices to reduce model errors by20%.
+Lead (Selected), SCRS Student Chapter “Innovative-Den”Jan 2026 – Present
+•Selected to lead and collaborate with20+ studentson AI and software projects.
+•Organized5+ technical events, including hackathons and workshops.
+•Mentored teams, improving project completion rate by30%.
+Projects
+Crop Yield & Market Price Prediction System
+•Built ML system (R²: 0.94 yield, 0.93 price), processing5000+ records.
+•Developed an end-to-end pipeline, reducing prediction error by18%.
+•Deployed a real-time Streamlit application for user interaction and predictions.
+•GitHub: Link.
+AgriTrade – Voice-Based Agricultural Platform
+•Developed a Flutter-based application connecting farmers and retailers.
+•Implemented Firebase authentication, real-time database, and workflow management.
+•Designed voice-assisted features and offline prediction capability for accessibility.
+•GitHub: Link.
+Agis Intel – AI Intelligence Dashboard
+•Built a responsive dashboard using React and Tailwind CSS.
+•Integrated REST APIs using Axios for secure data handling and communication.
+•Improved data accessibility and visualization efficiency.
+•GitHub: Profile.
+Achievements
+•Bronze Medal – Academic Excellence (1st & 2nd Year).
+•Top 5 Finalist – Project Expo Competitions; Winner – Internal Hackathon.
+•Oracle Cloud Foundations Associate; Goethe-Zertifikat A1 (German).

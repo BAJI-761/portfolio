@@ -1,0 +1,280 @@
+/* =============================================================
+   DESIGN SYSTEM — Extracted from baicheramy.com
+   Mapped from design tokens to semantic CSS variables
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* ---- Light Theme (Default) ---- */
+:root {
+  /* --- Colors (from extracted tokens) --- */
+  --bg-primary: #ffffff;           /* color-4 */
+  --bg-secondary: #f4f4f5;        /* color-5 */
+  --bg-card: #ffffff;              /* color-4 */
+  --bg-dock: rgba(255, 255, 255, 0.72);
+  --bg-tooltip: rgba(255, 255, 255, 0.9);
+  --text-primary: #18181b;        /* color-1 */
+  --text-secondary: #71717a;      /* color-3 / color-10 */
+  --text-dimmed: #a1a1aa;         /* color-2 */
+  --border-color: #e4e4e7;        /* color-7 */
+  --border-hover: #a1a1aa;        /* color-2 */
+  --accent: #18181b;               /* color-1 */
+  --accent-hover: #27272a;        /* color-8 */
+
+  /* --- Typography --- */
+  --font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Type scale (mapped from extracted typography ranks) */
+  --text-xs: 0.75rem;             /* 12px — rank 2 */
+  --text-xs-lh: 1.125rem;         /* 18px */
+  --text-sm: 0.875rem;            /* 14px — rank 3/4 */
+  --text-sm-lh: 1.25rem;          /* 20px */
+  --text-base: 1rem;              /* 16px — rank 1/5 */
+  --text-base-lh: 1.5rem;         /* 24px */
+  --text-lg: 1.125rem;            /* 18px */
+  --text-lg-lh: 1.625rem;         /* 26px */
+  --text-xl: 1.25rem;             /* 20px */
+  --text-xl-lh: 1.75rem;          /* 28px */
+  --text-2xl: 1.5rem;             /* 24px */
+  --text-2xl-lh: 2rem;            /* 32px */
+  --text-3xl: 1.875rem;           /* 30px */
+  --text-3xl-lh: 2.25rem;         /* 36px */
+  --text-4xl: 2.25rem;            /* 36px */
+  --text-4xl-lh: 2.5rem;          /* 40px */
+  --text-5xl: 3rem;               /* 48px — Hero name */
+  --text-5xl-lh: 1;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-tighter: -0.03em;
+  --letter-spacing-normal: normal;
+  --letter-spacing-label: -0.26px; /* rank 5 */
+
+  /* --- Spacing (from extracted tokens) --- */
+  --space-1: 2px;                  /* space-7 */
+  --space-2: 4px;                  /* space-3 */
+  --space-3: 5px;                  /* space-6 */
+  --space-4: 6px;                  /* space-1 */
+  --space-5: 8px;                  /* space-5 */
+  --space-6: 10px;                 /* space-2 */
+  --space-7: 12px;                 /* space-4 */
+  --space-8: 16px;                 /* space-8 */
+  --space-9: 20px;                 /* space-10 */
+  --space-10: 24px;                /* space-9 */
+  --space-12: 32px;
+  --space-16: 48px;
+  --space-20: 64px;
+  --space-24: 80px;
+  --space-32: 128px;
+
+  /* --- Border Radius (from extracted tokens) --- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;                /* radius-5 */
+  --radius-md: 10px;               /* radius-4 */
+  --radius-base: 12px;             /* radius-1 */
+  --radius-lg: 20px;               /* radius-3 */
+  --radius-xl: 24px;               /* radius-2 */
+  --radius-full: 9999px;
+
+  /* --- Transitions --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  /* --- Layout --- */
+  --max-width: 1100px;
+  --max-width-wide: 1200px;
+  --dock-height: 64px;
+  --page-padding-x: 40px;
+  --page-padding-top: 80px;
+  --page-padding-bottom: 120px; /* room for dock */
+
+  /* --- Z-Index --- */
+  --z-content: 1;
+  --z-dock: 100;
+  --z-tooltip: 200;
+  --z-modal: 300;
+}
+
+/* Mobile Overrides */
+@media (max-width: 768px) {
+  :root {
+    --page-padding-x: 20px;
+    --space-16: 32px;
+    --space-20: 40px;
+    --space-24: 48px;
+    --space-32: 64px;
+    
+    --text-5xl: 2.5rem;
+    --text-4xl: 2rem;
+    --text-3xl: 1.5rem;
+    --text-2xl: 1.25rem;
+  }
+}
+
+/* ---- Dark Theme ---- */
+[data-theme="dark"] {
+  --bg-primary: #000000;           /* color-6 */
+  --bg-secondary: #111111;
+  --bg-card: #18181b;              /* color-1 */
+  --bg-dock: rgba(24, 24, 27, 0.78);
+  --bg-tooltip: rgba(24, 24, 27, 0.95);
+  --text-primary: #f4f4f5;        /* color-5 */
+  --text-secondary: #a1a1aa;      /* color-2 */
+  --text-dimmed: #71717a;         /* color-3 */
+  --border-color: #27272a;        /* color-8 */
+  --border-hover: #424242;        /* color-9 */
+  --accent: #f4f4f5;               /* color-5 */
+  --accent-hover: #e4e4e7;        /* color-7 */
+}
+
+/* ---- Base Styles ---- */
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  line-height: var(--text-base-lh);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color var(--duration-slow) var(--ease-out),
+              color var(--duration-slow) var(--ease-out);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease,
+              opacity var(--duration-fast) ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ---- Utility Classes ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding-x);
+}
+
+.container--wide {
+  max-width: var(--max-width-wide);
+}
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-dimmed { color: var(--text-dimmed); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Page Wrapper ---- */
+.page {
+  min-height: 100vh;
+  padding-top: var(--page-padding-top);
+  padding-bottom: var(--page-padding-bottom);
+}
+
+/* ---- Section Spacing ---- */
+.section {
+  padding: var(--space-24) 0;
+}
+
+.section + .section {
+  padding-top: var(--space-16);
+}
+
+/* ---- Selection ---- */
+::selection {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dimmed);
+}
+
+/* ---- Dotted Grid Background (Hero) ---- */
+.bg-grid {
+  background-image: radial-gradient(circle, var(--border-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

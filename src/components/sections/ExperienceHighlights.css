@@ -1,0 +1,54 @@
+/* =============================================================
+   EXPERIENCE HIGHLIGHTS — Home page compact bullet list
+   ============================================================= */
+
+.exp-highlights-section {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding-x) 120px;
+}
+
+.exp-highlights-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] .exp-highlight-item {
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+.exp-highlight-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] .exp-highlight-item:first-child {
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+
+.highlight-dash {
+  color: var(--text-dimmed);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.highlight-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.exp-highlight-item:hover .highlight-text {
+  color: var(--text-primary);
+}
