@@ -69,7 +69,7 @@ export default function Hero({ email }) {
             <span>Contact Me</span>
           </button>
           <a 
-            href="https://drive.google.com/file/d/1sJgNmW9Qdw5arC4MJpou9HucMVMGWTxk/view?usp=sharing" 
+            href="/resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="nav-pill"
@@ -129,7 +129,7 @@ export default function Hero({ email }) {
             View work <ArrowUpRight size={16} />
           </button>
           <a
-            href="https://drive.google.com/file/d/1sJgNmW9Qdw5arC4MJpou9HucMVMGWTxk/view?usp=sharing"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn"

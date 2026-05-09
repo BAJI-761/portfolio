@@ -454,7 +454,7 @@ export default function About() {
               <span className={`about-copied-toast ${copied ? 'visible' : ''}`}>Copied!</span>
             </button>
             <a
-              href="https://drive.google.com/file/d/1sJgNmW9Qdw5arC4MJpou9HucMVMGWTxk/view?usp=sharing"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="about-cta-btn about-cta-btn-secondary"
