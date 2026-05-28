@@ -67,7 +67,11 @@ export default function FeaturedWork() {
           <div key={project.id} className="project-card-wrapper">
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-card">
               <div className="project-image-container">
-                <img src={project.image} alt={project.title} className="project-image" />
+                {project.video ? (
+                  <video src={project.video} autoPlay loop muted playsInline className="project-image" />
+                ) : (
+                  <img src={project.image} alt={project.title} className="project-image" />
+                )}
               </div>
               
               <div className="project-content">

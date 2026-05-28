@@ -29,16 +29,19 @@ export default function Projects() {
 
       // Image parallax
       document.querySelectorAll('.project-list-image-container').forEach(container => {
-        gsap.to(container.querySelector('img'), {
-          yPercent: -15,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: container,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1,
-          },
-        });
+        const media = container.querySelector('img') || container.querySelector('video');
+        if (media) {
+          gsap.to(media, {
+            yPercent: -15,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: container,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 1,
+            },
+          });
+        }
       });
     }, containerRef);
 
@@ -60,7 +63,11 @@ export default function Projects() {
             {projectsData.map((project) => (
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-list-card" key={project.id}>
                 <div className="project-list-image-container">
-                  <img src={project.image} alt={project.title} />
+                  {project.video ? (
+                    <video src={project.video} autoPlay loop muted playsInline />
+                  ) : (
+                    <img src={project.image} alt={project.title} />
+                  )}
                 </div>
                 
                 <div className="project-list-content">

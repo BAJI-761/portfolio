@@ -5,7 +5,7 @@ export const projectsData = [
     description: "An AI-powered agricultural marketplace connecting farmers directly to retailers. Features voice-powered ordering, full escrow trade lifecycle, and Google Gemini AI crop recommendations.",
     longDescription: "AgriTrade is a full-stack platform built to eliminate middleman exploitation in Indian agriculture. It features a Flutter-based cross-platform app backed by FastAPI and Firebase. Key innovations include native speech-to-text for illiterate farmers to list produce via voice commands, a 5-phase escrow payment system managed via Firebase Cloud Functions, and an AI-driven smart crop engine.",
     tags: ["Flutter", "FastAPI", "Firebase", "Gemini AI", "Python"],
-    image: "/images/ui_agritrade.png",
+    video: "/videos/agritrade.mp4",
     link: "https://github.com/BAJI-761/Agri-trade-app",
     featured: true,
     year: "2026"
@@ -16,7 +16,7 @@ export const projectsData = [
     description: "A financial command center for gig workers. Tracks irregular income, simulates DeFi yields, and generates a dynamic financial health score.",
     longDescription: "India's gig economy has 15M+ workers with zero financial safety nets. Gig-Guard solves this by providing a comprehensive financial dashboard. Built with React and Firebase, it features a custom cash flow smoothing engine, a DeFi vault simulator, smart risk-based insurance, and gamified financial health scoring in a premium, custom-designed dark mode UI.",
     tags: ["React 18", "Firebase", "Vite", "FinTech", "Recharts"],
-    image: "/images/ui_gigguard.png",
+    image: "/images/ui_gigguard_new.png",
     link: "https://gig-gaurd.onrender.com/",
     featured: true,
     year: "2026"
